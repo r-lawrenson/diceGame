@@ -11,6 +11,16 @@ const rollDiceBtn = document.getElementById("rollDiceBtn"); // dice button
 const rollDiceValue = document.getElementById("rollDiceValue"); // dice value
 const playerScore = document.getElementById("playerScore"); // player score value
 const winLooseState = document.getElementById("winLooseState"); // win loose message
+const diceImage = document.getElementById("image"); // get image element
+
+const diceImageSrc = [
+    "images/D1.png",
+    "images/D2.png",
+    "images/D3.png",
+    "images/D4.png",
+    "images/D5.png",
+    "images/D6.png"
+];
 
 setTargetBtn.addEventListener("click", () => {
                 // check input value to set target score
@@ -38,9 +48,10 @@ function rollTheDice(){
     diceRolled = Math.floor(Math.random() * 6 +1)
                 // console.log(`log dice rolled is ${diceRolled}`);
     rollDiceValue.textContent = diceRolled;
+    diceImage.src = `${diceImageSrc[diceRolled -1]}`
                 // console.log(`log context dice rolled ${rollDiceValue.textContent}`);
                 // call function to check the dice
-    winLooseState.textContent = "";
+                // winLooseState.textContent = "";
     checkDiceRolled();
 };
 
@@ -78,4 +89,6 @@ function reset(){
     playerScoreTotal = 0;
     rollDiceValue.textContent = 0;
     rollDiceBtn.textContent = "Roll dice";
+    winLooseState.textContent = "";
+    diceImage.src = ""
 };

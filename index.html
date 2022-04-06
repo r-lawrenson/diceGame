@@ -8,26 +8,28 @@
     <title>Dice Game</title>
 </head>
 <body>
-    <header>Dice Game</header>
+    <header class="box">Dice Game</header>
     
-    <div>Ready Player One</div>
+    <div class="main"></div>
 
-        <div class="set-target">
+        <div class="set-target box">
             <div>Set New Target Score:
                 <input id="setTargetInput" type="number"/>
-                <button id="setTargetBtn">Set target</button>
+                <button class="button" id="setTargetBtn">Set target</button>
             <p>Default target score is 20, target score will reset to default with each new game.</p>
             </div>
         </div>
-        <div class="target-score">Target Score is:
+        <div class="target-score box">Target Score is:
             <div id="targetScore" type="int">20</div>
         </div>
-        <div class="dice-window">
+        <div class="dice-window box">
+            <div id="winLooseState">o</div>
             <div class="dice">
-                <div id="winLooseState"></div>
+                <img id="image" src="" alt="">
+                    
             </div>
         </div>     
-        <div class="scores">
+        <div class="scores box">
             <div>Player Score:
                 <div id="playerScore" type="number">0</div>
             </div>
@@ -36,8 +38,8 @@
                 <div id="rollDiceValue" type="number">0</div> 
             </div>
         </div>
-        <div class="roll-button">
-            <button id="rollDiceBtn">Roll dice</button>
+        <div class="roll-button box">
+            <button class="button" id="rollDiceBtn">Roll dice</button>
         </div>
     <script src="app.js"></script>
 </body>
