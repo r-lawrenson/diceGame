@@ -12,26 +12,33 @@
     
     <div>Ready Player One</div>
 
-        <div>Set Score Target:
-        <input id="setTargetInput" type="number"/>
-            <button id="setTargetBtn">Set Score</button>
-            <div>Target Score is:
-                <div id="targetScore" type="int">20</div>
+        <div class="set-target">
+            <div>Set New Target Score:
+                <input id="setTargetInput" type="number"/>
+                <button id="setTargetBtn">Set target</button>
+            <p>Default target score is 20, target score will reset to default with each new game.</p>
             </div>
         </div>
-
-    <div>Player Score:
-        <div id="playerScore" type="number">0</div>
-    </div>
-    <div id="winLooseState"></div>
-
-
-    <div>Role dice to play
-        <div id="rollDiceValue" type="number">0</div> 
-            <!-- <p>Click to Role Dice</p> -->
-        <button id="rollDiceBtn">Roll dice</button>
-         
-    </div>  
+        <div class="target-score">Target Score is:
+            <div id="targetScore" type="int">20</div>
+        </div>
+        <div class="dice-window">
+            <div class="dice">
+                <div id="winLooseState"></div>
+            </div>
+        </div>     
+        <div class="scores">
+            <div>Player Score:
+                <div id="playerScore" type="number">0</div>
+            </div>
+            
+            <div>Dice rolled:
+                <div id="rollDiceValue" type="number">0</div> 
+            </div>
+        </div>
+        <div class="roll-button">
+            <button id="rollDiceBtn">Roll dice</button>
+        </div>
     <script src="app.js"></script>
 </body>
 </html>

@@ -1,7 +1,104 @@
 /* dice game */
 body{
     margin: 0 auto;
+    background-color: dimgray;
     width: 600px;
     align-items: center;
 }
 
+header, .main, .set-target, .dice-window, #winLooseState, .scores div, .roll-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header{
+    margin-top: 10px;
+    font-size: 60px;
+}
+
+.set-target{
+    margin: 10px auto;
+    padding: 15px;
+    height: 50px;
+    font-size: 20px;
+}
+
+.set-target p{
+    font-size: 16px;
+    color: rgb(182, 24, 24);
+}
+
+.dice-window{
+    margin: 10px auto;
+    padding: 10px;
+    height: 300px;
+}
+.dice{
+    margin: 0px auto;
+    height: inherit;
+    width: 100%;
+    border: 5px solid rgb(60, 255, 0);
+}
+
+#winLooseState{
+    font-size: 40px;
+}
+
+.target-score{
+    margin: 0px auto;
+    padding: 10px;
+    height: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 30px;
+}
+
+#targetScore, #playerScore, #rollDiceValue {
+    font-size: 40px;
+}
+
+.scores{
+    margin: 10px auto;
+    padding: 15px;
+    height: 60px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 30px;
+}
+
+.scores div{
+    flex-direction: column;
+}
+
+.roll-button{
+    height: 40px;
+}
+
+#rollDiceBtn{
+    min-height: 80%;
+    min-width: 60%;
+}
+
+#setTargetBtn{
+    width: 150px;
+}
+.button{
+    background-color: aliceblue;
+    border-radius: 8px;
+    border: 1px solid black;
+    font-size: 16px;
+}
+
+.button:hover{
+    background-color:#4472c4;
+    box-shadow: 0px 0px 15px 5px #202124e3;
+}
+
+.box{
+    border-radius: 8px;
+    background-color:lightskyblue;
+    box-shadow: 0px 0px 10px 5px #202124e3;
+}
