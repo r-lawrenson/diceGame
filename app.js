@@ -1,14 +1,16 @@
 // dice game
-
 let targetDefault = 20;
-let diceLoose = 1;
-
-                // set target button
-const setTargetBtn = document.getElementById("setTargetBtn");
-                // input for setting target score other than default
-const setTargetInput = document.getElementById("setTargetInput");
-                // target score default is let targetDefault = 20
-const targetScore = document.getElementById("targetScore");
+let diceLoose = 1; // dice loose value // would be nice to add this as input
+let diceRolled = 0; // role dice value from rollDice
+let playerScoreTotal = 0; // set the player score in a function
+               
+const setTargetBtn = document.getElementById("setTargetBtn"); // set target button
+const setTargetInput = document.getElementById("setTargetInput"); // input for setting target score other than default
+const targetScore = document.getElementById("targetScore"); // target score default is let targetDefault = 20
+const rollDiceBtn = document.getElementById("rollDiceBtn"); // dice button
+const rollDiceValue = document.getElementById("rollDiceValue"); // dice value
+const playerScore = document.getElementById("playerScore"); // player score value
+const winLooseState = document.getElementById("winLooseState"); // win loose message
 
 setTargetBtn.addEventListener("click", () => {
                 // check input value to set target score
@@ -22,15 +24,7 @@ setTargetBtn.addEventListener("click", () => {
                 // console.log(`log target score is ${targetScore.textContent}`);
 });
 
-                /////////////////////////////////////////////////////
-                // role dice value from rollDice
-let diceRolled = 0;
-                // dice button
-const rollDiceBtn = document.getElementById("rollDiceBtn");
-                // dice value
-const rollDiceValue = document.getElementById("rollDiceValue");
-
-                // roll dice on click and update roll dice value
+                // determin win loose game state
 rollDiceBtn.addEventListener("click", () => {
     if(rollDiceBtn.textContent == "Roll dice"){
         rollTheDice();
@@ -39,7 +33,7 @@ rollDiceBtn.addEventListener("click", () => {
         reset();
     }
 });
-
+                // roll dice on click and update roll dice value
 function rollTheDice(){
     diceRolled = Math.floor(Math.random() * 6 +1)
                 // console.log(`log dice rolled is ${diceRolled}`);
@@ -49,13 +43,6 @@ function rollTheDice(){
     winLooseState.textContent = "";
     checkDiceRolled();
 };
-
-                /////////////////////////////////////////////////////
-                // set the player score in a function
-let playerScoreTotal = 0;
-
-const playerScore = document.getElementById("playerScore");
-const winLooseState = document.getElementById("winLooseState");
 
 function checkDiceRolled() {
                 // console.log(`player score ${playerScore.textContent}`)
@@ -83,7 +70,7 @@ function checkDiceRolled() {
         }
     }
 }
-
+// reset variables and values for new game
 function reset(){
     targetScore.textContent = targetDefault;
     setTargetInput.value = "";
@@ -92,5 +79,3 @@ function reset(){
     rollDiceValue.textContent = 0;
     rollDiceBtn.textContent = "Roll dice";
 };
-
-
