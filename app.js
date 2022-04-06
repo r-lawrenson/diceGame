@@ -48,7 +48,7 @@ function rollTheDice(){
                 // call function to check the dice
     winLooseState.textContent = "";
     checkDiceRolled();
-}
+};
 
                 /////////////////////////////////////////////////////
                 // set the player score in a function
@@ -61,8 +61,8 @@ function checkDiceRolled() {
                 // console.log(`player score ${playerScore.textContent}`)
                 // console.log(`player score total ${playerScoreTotal}`)
                 // check if the dice rolled is a equal to loose value: default is 1
-    if(diceRolled == looseValue){
-        winLooseState.textContent = `You loose! You rolled a ${looseValue}`;
+    if(diceRolled == diceLoose){
+        winLooseState.textContent = `You loose! You rolled a ${diceLoose}`;
         rollDiceBtn.textContent = "Reset to play again";
     }else{
                 // if not a 1 add score to player score total
